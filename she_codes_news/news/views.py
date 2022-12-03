@@ -14,3 +14,11 @@ class IndexView(generic.ListView):
         context['latest_stories'] = NewsStory.objects.all()[:4]
         context['all_stories'] = NewsStory.objects.all()
         return context
+
+# will: 
+# look in your model (we have given it NewsStory. which is an index, technically.)
+# I will bring that 'index' back to you, I will call it story becuase you've said that in this class here. and we will attach the index template'
+class StoryView(generic.DetailView):
+    model = NewsStory
+    template_name = 'news/story.html'
+    context_object_name = 'story'
