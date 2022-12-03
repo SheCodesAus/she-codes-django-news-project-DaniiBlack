@@ -9,7 +9,7 @@
 
 **Part 1**
 > Facilitated Feature: Creating a form for adding new stories. Features to implement:
-  - Order the stories by date.
+>  - Order the stories by date.
   - Style the form for adding new stories.
   - Add a field to the NewsStory model for an image url and use this image url rather than the default
   - images provided in the starter.
