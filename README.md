@@ -10,27 +10,27 @@
 **Part 1**
 > Facilitated Feature: Creating a form for adding new stories. Features to implement:
 >  - Order the stories by date.
-  - Style the form for adding new stories.
-  - Add a field to the NewsStory model for an image url and use this image url rather than the default
-  - images provided in the starter.
+>  - Style the form for adding new stories.
+>  - Add a field to the NewsStory model for an image url and use this image url rather than the default
+>  - images provided in the starter.
 
 **Part 2**
 > Facilitated Feature: Creating a Users app. Features to implement:
-  - Functional login/logout buttons.
-  - Account view so authors can see their profile information.
-  - Create Account functionality, so a new user can sign up to be an author.
-  - View stories by a particular author.
-  - Show/Hide the relevant information and buttons based on whether the user is logged in/out (e.g. should only be able to see the button to create a new story if I am logged in).
-  - Enable/Disable the relevant features based on whether the user is logged in/out (e.g. should only be able to create a new story if I am logged in).
+>  - Functional login/logout buttons.
+>  - Account view so authors can see their profile information.
+>  - Create Account functionality, so a new user can sign up to be an author.
+>  - View stories by a particular author.
+>  - Show/Hide the relevant information and buttons based on whether the user is logged in/out (e.g. should only be able to see the button to create a new story if I am logged in).
+>  - Enable/Disable the relevant features based on whether the user is logged in/out (e.g. should only be able to create a new story if I am logged in).
 
 **Additional Features**
-  - Add categories to the stories and allow the user to search for stories by category.
-  - Add the ability to update and delete stories.
-  - Add the ability to “favourite” stories and see a page with your favourite stories.
+>  - Add categories to the stories and allow the user to search for stories by category.
+>  - Add the ability to update and delete stories.
+>  - Add the ability to “favourite” stories and see a page with your favourite stories.
 
 *Note*
-- You will use Django to create the website, and no other additional libraries are allowed unless approved by the Lead Mentor.
-- Make it your own! The code starter provided is to help you get the structure set up, and so you can look at something a little less ugly than the default ;) By the time you submit this, I would hope that you would have customised it to your taste and to what you think the She Codes News website should look like :) See the appendix for some inspiration.
+> - You will use Django to create the website, and no other additional libraries are allowed unless approved by the Lead Mentor.
+> - Make it your own! The code starter provided is to help you get the structure set up, and so you can look at something a little less ugly than the default ;) By the time you submit this, I would hope that you would have customised it to your taste and to what you think the She Codes News website should look like :) See the appendix for some inspiration.
 
 ### Submission
 > Your code will be submitted via GitHub. Please include a directory in your repository containing a screenshot(s) of every page on your website.
@@ -38,7 +38,8 @@
 **Appendix**
 > Original styling:
 
-![original styling](documents/django_project_original_styling_Medium.jpeg)
+img coming soon. 
 
 > A customised version for inspiration:
-* IMG TO GO HERE, INCOMING *
+
+img coming soon
