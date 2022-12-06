@@ -36,10 +36,9 @@
 > Your code will be submitted via GitHub. Please include a directory in your repository containing a screenshot(s) of every page on your website.
 
 **Appendix**
-> Original styling:
+Original styling: 
+[image1](./screenshots/original_styling.png)
 
-img coming soon. 
+Customised for inspiration:
+[image2](./screenshots/customised_styling.png)
 
-> A customised version for inspiration:
-
-img coming soon
