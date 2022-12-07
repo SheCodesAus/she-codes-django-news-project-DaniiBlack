@@ -17,11 +17,12 @@
 **Part 2**
 > Facilitated Feature: Creating a Users app. Features to implement:
 >  - Functional login/logout buttons.
->  - Account view so authors can see their profile information.
+>  - Account view so authors can see their profile information. (Details!)
 >  - Create Account functionality, so a new user can sign up to be an author.
->  - View stories by a particular author.
+>  - View stories by a particular author. Ask Qs about this 
 >  - Show/Hide the relevant information and buttons based on whether the user is logged in/out (e.g. should only be able to see the button to create a new story if I am logged in).
 >  - Enable/Disable the relevant features based on whether the user is logged in/out (e.g. should only be able to create a new story if I am logged in).
+> Ask Qs about security 
 
 **Additional Features**
 >  - Add categories to the stories and allow the user to search for stories by category.
@@ -37,8 +38,8 @@
 
 **Appendix**
 Original styling: 
-[image1](./screenshots/original_styling.png)
+![image1](./screenshots/original_styling.png)
 
 Customised for inspiration:
-[image2](./screenshots/customised_styling.png)
+![image2](./screenshots/customised_styling.png)
 
