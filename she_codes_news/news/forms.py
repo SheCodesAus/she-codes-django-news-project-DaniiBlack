@@ -1,6 +1,9 @@
 from django import forms
+from django.contrib.auth import get_user_model
 from django.forms import ModelForm
-from .models import NewsStory
+from .models import NewsStory, Comment
+
+User = get_user_model()
 
 class StoryForm(ModelForm):
     class Meta:
@@ -15,3 +18,24 @@ class StoryForm(ModelForm):
                 }
             ),
         }
+
+ORDER_CHOICE= (
+    ('', "newest first"),
+    ('oldfirst', "oldest first")
+)
+
+class FilterForm(forms.Form):
+    author = forms.ModelChoiceField(label="author", queryset=User.objects.all(), required=False)
+    search = forms.CharField(label="search", required=False)
+
+class SearchForm(forms.Form):
+    with_author = forms.ModelChoiceField(
+        label='Author', queryset=User.objects.all(), required=False
+        )
+    search = forms.CharField(label="Search", required=False)
+
+class CommentForm(ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ["content"]

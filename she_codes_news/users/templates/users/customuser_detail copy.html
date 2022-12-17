@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ object.username }}
+{% for story in object.newsstory_set.all %}
+    {% include 'news/storyCard.html' with story=story %}
+{% endfor %}
+
+{% endblock content %}
