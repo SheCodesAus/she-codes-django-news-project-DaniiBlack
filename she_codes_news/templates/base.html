@@ -7,20 +7,22 @@
         <title>She Codes News</title>
         <meta name="description" content="">
         <meta name="author" content="Dani">
-        <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         {% block stylesheets %}  {% endblock %}
     </head>
 
     <body>
         <header>
+            {% include './nav.html' %}
             <div id="header-text">
                 <a id="header-link" href="{% url 'news:index' %}">
-                    <h1>She {Codes} News</h1>
+                    <h1 class="title-text"><span class="purple">SHE</span><span class="yellow">{CODES} </span><span class="news-title">NEWS</span></h1>
                 </a>
             </div>
+ 
             <!-- include nav here -->
-            {% include './nav.html' %}
+           
         </header>
 
         <!-- content blocks here -->

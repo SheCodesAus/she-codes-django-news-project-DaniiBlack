@@ -2,6 +2,8 @@
     margin: 2px;
     border: 1px solid #000;
     padding: 5px;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .story-card img {
@@ -17,6 +19,7 @@
     gap: 1px 1px;
     grid-template-areas: "left-1 right-1" "left-1 right-2" "left-1 right-3";
     max-height: 500px;
+    margin: 10px;
 }
 
 #story-card-1 {
@@ -68,6 +71,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 10px
 }
 
 #all-stories .story-card {
@@ -83,4 +87,46 @@
     float: right;
     margin: 0 0 10px 10px;
     width: 50%;
+}
+
+#news-text {
+    display:flex;
+    flex-direction: column;
+    background-color: #7A4CA9;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.search-label {
+    visibility: hidden;
+}
+
+.search-button {
+    height: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-top: 10px
+}
+
+.search-input {
+    border-radius: 10px;
+    height: 30px;
+}
+
+.new-story {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-section-label {
+    font-size: 2rem;
+    margin-left: 20px;
 }

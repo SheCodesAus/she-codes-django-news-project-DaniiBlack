@@ -27,12 +27,14 @@ ORDER_CHOICE= (
 class FilterForm(forms.Form):
     author = forms.ModelChoiceField(label="author", queryset=User.objects.all(), required=False)
     search = forms.CharField(label="search", required=False)
+    search.widget.attrs.update({'class' : 'search-input'})
 
 class SearchForm(forms.Form):
     with_author = forms.ModelChoiceField(
         label='Author', queryset=User.objects.all(), required=False
         )
     search = forms.CharField(label="Search", required=False)
+    
 
 class CommentForm(ModelForm):
 

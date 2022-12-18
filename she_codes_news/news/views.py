@@ -37,7 +37,6 @@ class IndexView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['latest_stories'] = NewsStory.objects.all()[:4]
         context['author_list'] = User.objects.all()
-        context['form'] = SearchForm(self.request.GET)
         context['form'] = FilterForm(self.request.GET)
         return context
 
