@@ -8,7 +8,7 @@ User = get_user_model()
 class StoryForm(ModelForm):
     class Meta:
         model = NewsStory
-        fields = ['title', 'pub_date', 'content']
+        fields = ['title', 'pub_date', 'content', 'image_url', 'categories']
         widgets = {
             'pub_date': forms.DateInput(format=('%m/%d/%Y'),
             attrs={
@@ -25,16 +25,12 @@ ORDER_CHOICE= (
 )
 
 class FilterForm(forms.Form):
+    categories = forms.ChoiceField(label="categories", choices=[('', '----'), ('clickbait','Clickbait'), ('politics','Politics'), ('travel','Travel'), ('badbitch', 'Bad bitch, its a genre')], required=False)
+    categories.widget.attrs.update({'class' : 'categories-input'})
     author = forms.ModelChoiceField(label="author", queryset=User.objects.all(), required=False)
+    author.widget.attrs.update({'class' : 'author-input'})
     search = forms.CharField(label="search", required=False)
     search.widget.attrs.update({'class' : 'search-input'})
-
-class SearchForm(forms.Form):
-    with_author = forms.ModelChoiceField(
-        label='Author', queryset=User.objects.all(), required=False
-        )
-    search = forms.CharField(label="Search", required=False)
-    
 
 class CommentForm(ModelForm):
 

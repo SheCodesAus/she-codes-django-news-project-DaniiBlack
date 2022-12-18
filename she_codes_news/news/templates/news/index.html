@@ -8,18 +8,33 @@
     {% block content %}
 
     <div id="news-text">
-        {% if request.user.is_authenticated %}
-        <a class="new-story" href="{% url 'news:newStory' %}">Write New Story</a>
-    {% endif %}
-    <form method="GET" style="display: flex; flex-direction: column; width: 200px" >
+
+    <form method="GET" style="display: flex; flex-direction: column" >
+        <div class="search-inputs">
         <label class="search-label">
-            {{form.search.label}}    
+            {{form.search.label}}   
         </label>
-        {{form.search}}
+        {{form.search}} 
+        <label class="search-label">
+            {{form.author.label}}   
+        </label>
+
+        {{form.author}} 
+        <label class="search-label">
+            {{form.categories.label}}   
+        </label>
+        {{form.categories}} 
+        </div>
         <button class="search-button" type="submit">Search News</button>
     </form>
     </div>
+    {% if request.user.is_authenticated %}
+    <div class="new-story-nav">
+        <a class="new-story" href="{% url 'news:newStory' %}">Write New Story</a>
+    </div>
+    {% endif %}
     <h2 class="story-section-label"> Latest News</h2>
+
     <div id="latest-stories">
         {% if latest_stories %}
             {% for story in latest_stories %}

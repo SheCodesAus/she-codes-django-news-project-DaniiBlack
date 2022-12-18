@@ -8,17 +8,22 @@
 {% block content %}
 
 
+<div id="story-container">
 <div id="story-wrapper">
     {% if user == story.author %}
-        <a href="{% url 'news:storyEdit' story.id %}">Edit</a>
-        <a href="{% url 'news:storyDelete' story.id %}">Delete</a>
+        <a class="story-nav" href="{% url 'news:storyEdit' story.id %}">Edit</a>
+        <a class="story-nav" href="{% url 'news:storyDelete' story.id %}">Delete</a>
     {% endif %}
     <h2>{{ story.title }}</h2>
-    <h4>{{ story.author }}</h4>
+    <h4>Written by: {{ story.author }}</h4>
     <div id="story-content">
-        <img src="{% static '/news/images/placeholder-5.jpg' %}">
+        <img src="{{ story.image_url }}">
         {{ story.content|linebreaks }}
     </div>
+
+</div>
+
+<div id="favourite-wrapper">
     <div>
         {% if story.favourited_by.count %}
             Liked by: {{ story.favourited_by.count }} user{{ story.favourited_by.count|pluralize:"s" }} 
@@ -26,7 +31,7 @@
         {% endif %}
         <a href="{% url 'news:like' story.id %}"><button>{% if request.user in story.favourited_by.all %}Unlike{% else %}Like{% endif %} Story</button></a>
     <div>
-</div>
+<div>
 
 <div id="comment-wrapper">
     <div>
@@ -45,6 +50,7 @@
         <li>{{comment.author.username}} ({{comment.created_at}}): {{ comment.content }}</li>
     {% endfor %}
     </ul>
+</div>
 </div>
 
 {% endblock %}

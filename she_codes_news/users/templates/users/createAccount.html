@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>Create Account</h2>
-<form method="post">
+<form style="margin: 20px" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Create Account</button>

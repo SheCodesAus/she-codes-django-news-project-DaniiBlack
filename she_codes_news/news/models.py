@@ -10,10 +10,11 @@ class NewsStory(models.Model):
     )
     pub_date = models.DateTimeField()
     content = models.TextField()
-    liked_by = models.ManyToManyField(User, related_name='liked_stories', blank=True)
+    image_url = models.URLField(max_length=1000, default="https://picsum.photos/600")
     favourited_by = models.ManyToManyField(
         User, related_name="favourites", blank=True
     )
+    categories = models.CharField(max_length=20, choices=[('clickbait','Clickbait'), ('politics','Politics'), ('travel','Travel'), ('badbitch', 'Bad bitch, its a genre')], default='Clickbait')
 
 class Comment(models.Model):
     story = models.ForeignKey(NewsStory, related_name="comments", on_delete=models.CASCADE)

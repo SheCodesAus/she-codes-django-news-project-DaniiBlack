@@ -2,7 +2,7 @@
     <!-- news:story becuase in our urls file we've named it story.  -->
     <a href="{% url 'news:story' story.id %}">
         {% if position < 5 %}
-            <img src="../static/news/images/placeholder-{{ position }}.jpg">
+            <img src="{{ story.image_url }}">
         {% else %}
             <img src="https://picsum.photos/600">
         {% endif %}

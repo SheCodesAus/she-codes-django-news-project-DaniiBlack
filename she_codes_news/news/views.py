@@ -5,7 +5,7 @@ from django.views import generic
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, redirect
 from .models import NewsStory
-from .forms import StoryForm, CommentForm, SearchForm, FilterForm
+from .forms import StoryForm, CommentForm, FilterForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 User = get_user_model()
@@ -19,10 +19,9 @@ class IndexView(generic.ListView):
         form = FilterForm(self.request.GET)
         order_by = "-pub_date"
         if form.is_valid():
-            order = form.cleaned_data.get('order')
-            if order == "oldfirst":
-                order_by = "pub_date"
 
+            if categories := form.cleaned_data.get('categories'):
+                qs = qs.filter(categories=categories)
 
             if author := form.cleaned_data.get('author'):
                 qs = qs.filter(author=author)
@@ -51,16 +50,6 @@ class StoryView(generic.DetailView):
         context["form"] = CommentForm()
         context["form_action"] = reverse_lazy("news:addComment", kwargs={"pk": self.kwargs.get('pk')})
         return context
-
-@login_required
-def like_post(request, pk):
-    story = get_object_or_404(NewsStory, pk=pk)
-    user = request.user
-    if story.liked_by.filter(id=user.id).exists():
-        story.liked_by.remove(user)
-    else:
-        story.liked_by.add(user)
-    return redirect('news:story', pk=story.id)
 
 @login_required
 def like(request, pk):
