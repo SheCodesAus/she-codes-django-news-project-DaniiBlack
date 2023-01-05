@@ -1,6 +1,12 @@
 <nav>
-    <a href="{% url 'news:index' %}">Home</a>
-    <a href="#">username</a>
-    <a href="#">Logout</a>
-    <a href="#">Login</a>
+    <ul class='nav-content'>
+    <li><a href="{% url 'news:index' %}">Home</a></li>
+    {% if request.user.is_authenticated %}
+        <li><a href="{% url 'users:userprofile' username=user.username %}">{{ user.username }}</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'users:createAccount' %}">Sign up</a></li>
+    {% endif %}
+    </ul>
 </nav>

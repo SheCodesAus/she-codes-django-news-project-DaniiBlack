@@ -2,28 +2,42 @@
 
 body {
     background-color: rgb(240, 239, 239);
+    margin: 0px;
+    font-family: 'IBM Plex Sans';
 }
 
 header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
-}
-
-img {
-    filter: grayscale(100%);
+    flex-direction: column;
+    background-color: white;
 }
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
     text-decoration: none;
+    letter-spacing: -0.05em;
     font-size: 4rem;
     margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.title-text {
+    display: flex;
+}
+
+.purple {
+    color: #7A4CA9
+}
+
+.yellow {
+    color: #EDA646 
+}
+
+.news-title {
+    margin-left: auto;
+    padding-right: 10px
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
 }
 
 h3 {
@@ -32,15 +46,7 @@ h3 {
 }
 
 #header-text {
-    flex-basis: 80%;
-    display: flex;
-}
-
-nav {
-    flex-basis: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    padding-left: 20px;
 }
 
 a {
@@ -48,6 +54,36 @@ a {
     text-decoration: none;
     color: #000;
 }
+
+nav {
+    display: flex;
+    background-color: #7A4CA9;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    justify-content: end;
+}
+
+.nav-content {
+    display:flex;
+    width: 500px;
+    justify-content: space-around;
+}
+
+ul {
+    list-style: none;
+}
+
+#nav-content {
+
+}
+
+
+
+nav a {
+    color: #fff;
+}
+
+
 
 a, p {
     font-family: monospace;
